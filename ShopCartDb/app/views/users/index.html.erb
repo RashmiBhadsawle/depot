@@ -1,0 +1,26 @@
+<p id="notice">
+  <%= notice %>
+</p>
+<h1> Welcome users! </h1>
+<table>
+<tr>
+  <th> Username </th>
+  </tr>
+
+  <% @user.each do |user| %>
+  <tr>
+    <td><%= user.username %></td>
+    <td><%= link_to 'Edit' , :controller => 'users',:action => 'edit', :id => user %> </td>
+  </tr>
+      
+<% end %>
+
+  <br />
+  <tr>
+    <td> <a href="/users/insert"> New User </a> 
+
+    </td>
+  </tr>
+
+</table>
+
